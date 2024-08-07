@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
+
 import PageTitle from './components/PageTitle'
 import RSBuilder from './pages/Dashboard/RSBuilder'
 import {Route, Routes, useLocation} from 'react-router-dom'
@@ -6,7 +7,16 @@ import Defaultlayout from './layout/Defaultlayout'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
 
   return (
     <Defaultlayout>
