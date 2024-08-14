@@ -38,6 +38,17 @@
   transition: all 300ms ease-in-out;
 }
 
+.header{
+  display:flex;
+}
+.headerOuterLayout{
+  display: flex;
+}
+
+.profileInnerLayout{
+  display: flex;
+}
+
 @media (min-width: 1024px) {
   .asidelayout {
     position: static;
