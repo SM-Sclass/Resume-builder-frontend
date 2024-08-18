@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size);
+}
 #root {
   width: 100vw;
   height: 100dvh;
@@ -15,38 +25,227 @@
   overflow-y: hidden;
 }
 
+
 .mainlayout {
   display: flex;
   width: 77.5%;
   flex-direction: column;
+  flex: 5;
   overflow-y: hidden;
   position: relative;
 }
-
+main {
+  flex: 1; 
+  
+  background-color: #fff;
+  color: #333;
+}
+.childLayout {
+  width: 100%;
+  height: 100%;
+}
+ .mainDashboardLayout{
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #fffafa;
+} 
+.usernameAndScratch{
+  display: flex;  
+  align-items: center;
+  justify-content: start;
+  margin: 1.5rem;
+}
+.usernameAndScratch .nav-link{
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem;
+  width: 200px;
+}
+.userNameLayout{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-right: 3rem;
+}
+.userNameLayout span{
+  font-size: 0.8rem;
+  color: #898989;
+}
 .asidelayout {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 9999;
   display: flex;
+  align-items: start;
+  justify-content: top;
   height: 100vh;
   min-width: 0;
   width: 22.5%;
   flex-direction: column;
   overflow-y: hidden;
-  background-color: black;
+  background-color: #fff;
+  color: #333;
+  border-right: 2px solid #f0fff0;
   transition: all 300ms ease-in-out;
+  padding: 0.8rem;
+}
+.navouterlayout{
+  margin: 1.3rem 0.5rem;
+}
+.navinnerlayout ul{
+  list-style-type: none;
+}
+.navinnerlayout ul li{
+  padding: 0.8rem;
+}
+.navinnerlayout h6{
+  color: #898989;
+}
+.navLinks{
+  margin-top: 1.5rem;
+}
+.brandLayout{
+  
+  margin: 0.5rem;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  padding: 0.6rem;
+  border-bottom: 2px solid #f0fff0 ;
+  box-sizing: border-box;
+}
+.nav-link{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: bottom;
+  font-weight: bold;
+}
+.nav-link h2{
+  color: black;
+}
+.nav-link img{
+  fill: #333;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+}
+.scratchLinkLayout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scratchLinkInnerLayout{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.scratchLinkInnerLayout span{
+  color: #898989;
+  font-size: 0.7rem;
+  font-weight: 0;
 }
 
-.header{
-  display:flex;
+.templateGalleryLayout{
+  margin: 1rem;
 }
-.headerOuterLayout{
+.headerOuterLayout {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 10;
+  margin: 0.3rem;
+}
+.scrumbar{
+  fill: #333;
+  height: 1.5rem;
+  flex: 2;
+}
+.searchLayout {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.25rem 0.55rem;
+  box-sizing: border-box;
+  border-radius: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 4;
 }
 
-.profileInnerLayout{
+.searchInnerLayout {
   display: flex;
+  align-items: center;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden; /* Add this to prevent overflow */
+}
+
+.searchInnerLayout button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin:0.35rem ;
+}
+
+.searchInnerLayout button img {
+  fill: #333;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.searchInnerLayout input[type="text"] {
+  border: none;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+  flex: 1;
+  margin: 0.125rem;
+  font-size: 0.9rem;
+  box-shadow: none; 
+  width: 250px;
+}
+
+.searchInnerLayout input[type="text"]:focus {
+  background-color: #fff; /* Add this to maintain white background color on focus */
+}
+
+.profileLayout{
+  display: flex;
+  justify-content: end;
+  flex: 4;
+}
+.profileInnerLayout {
+  display: flex;
+  align-items: center;
+}
+
+.profileInnerLayout ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.profileInnerLayout li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  list-style-type: none;
 }
 
 @media (min-width: 1024px) {

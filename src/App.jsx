@@ -1,10 +1,11 @@
-import { useState , useEffect} from 'react'
+import React , { useState , useEffect}  from 'react'
+import {Route, Routes, useLocation} from 'react-router-dom'
+import './App.css'
 
 import PageTitle from './components/PageTitle'
 import RSBuilder from './pages/Dashboard/RSBuilder'
-import {Route, Routes, useLocation} from 'react-router-dom'
 import Defaultlayout from './layout/Defaultlayout'
-import './App.css'
+import TemplateGallery from './pages/TemplateGallery/TemplateGallery'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ function App() {
         <Route path='/templateGallery' element={
             <>
             <PageTitle title ="Template Gallery"/>
+            <TemplateGallery/>
           </>
           }
         />

@@ -13,7 +13,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         storedSidebarExpanded === null ? false : storedSidebarExpanded === 'true');
 
     useEffect(() => {
-        const clickHandler = (arget) => {
+        const clickHandler = (target) => {
             if (!sidebar.current || !trigger.current) return;
             if (
                 !sidebarOpen ||
@@ -49,13 +49,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
     return (
         <aside ref={sidebar}
-            className={`asidelayout ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-                }`}>
-            <div className="flex items-center justify-between w-fit gap-2 px-6 py-5.5 lg:py-6.5">
-                <NavLink to="/">
-                    RSBuilder
+            className={`asidelayout ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <div className="brandLayout">
+                <NavLink to="/" className="nav-link">
+                    <h2>RSBuilder</h2>
                 </NavLink>
 
+
+                {/* 
                 <button
                     ref={trigger}
                     onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -76,23 +77,25 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                             fill=""
                         />
                     </svg>
-                </button>
+                </button> */}
             </div>
             <div className="navouterlayout">
                 <nav className="leftlayoutnav">
                     <div className="navinnerlayout">
-                        <h3>
+                        <h6>
                             MENU
-                        </h3>
-                        <ul className="">
+                        </h6>
+                        <ul className="navLinks">
                             <li>
-                                <NavLink to ="/">
+                                <NavLink to="/" className="nav-link">
+                                <img src="public/home.svg" alt="HomeSVG" />
                                     Dashboard
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/templateGallery">
-                                    Tempplate Gallery
+                                <NavLink to="/templateGallery" className="nav-link">
+                                <img src="public/template.svg" alt="tplySVG" />
+                                    Template Gallery
                                 </NavLink>
                             </li>
                         </ul>
