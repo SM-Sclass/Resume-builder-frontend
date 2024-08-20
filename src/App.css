@@ -247,7 +247,16 @@ main {
   margin-right: 1rem;
   list-style-type: none;
 }
+.BasicIntroLayout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+}
+.IntroContact{
+  display: flex;
+  gap: 20px;
+}
 @media (min-width: 1024px) {
   .asidelayout {
     position: static;

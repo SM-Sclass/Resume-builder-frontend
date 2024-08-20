@@ -1,8 +1,8 @@
 import React from 'react'
-
+import ModernTemplate from '../../templates/modern/ModernTemplate'
 function TemplateGallery() {
   return (
-    <div className='templateGalleryLayout'>TemplateGallery</div>
+    <div className='templateGalleryLayout'><ModernTemplate/></div>
   )
 }
 
